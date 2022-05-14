@@ -1,0 +1,6 @@
+created(1652551036.42922).
+assert(user_role('John',user)).
+assert(user_role('Mary',user)).
+assert(user_role('Ellen',developer)).
+assert(user_role('Stan',user)).
+assert(user_role('Eric',administrator)).
