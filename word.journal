@@ -1,11 +1,8 @@
-created(1652554192.075196).
-assert(word(this)).
-assert(word(that)).
-assert(word(the)).
-assert(word(than)).
-assert(word(then)).
+created(1652557936.420261).
 assert(word(andressa)).
 assert(word(henrique)).
 assert(word(andre)).
 assert(word(leo)).
 assert(word(almeida)).
+assert(word(leonardo)).
+assert(word(leonardo)).

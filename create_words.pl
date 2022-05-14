@@ -1,9 +1,8 @@
-:- module(create_words,[]).
+% "create_words:assert_word(leonardo)"?
 
 :- use_module(library(persistency)).
 
-:- persistent
-        word(string:atom).
+:- persistent word(string:atom).
 
 :- db_attach('word.journal', []).
 
