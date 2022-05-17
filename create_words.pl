@@ -1,3 +1,6 @@
+% Henrique Aurelio de Carvalho Silva - 201665296C
+% Andressa Ferrugini de Oliveira - 201665251AC
+
 % "create_words:assert_word(leonardo)"?
 
 :- use_module(library(persistency)).
@@ -9,17 +12,17 @@
 :- initialization(main).
 
 add_word(String) :-
-        (
-                word(String), !
-        ;
-                assert_word(String)
-        ).
+(
+	word(String), !
+	;
+	assert_word(String)
+).
 
 
 main :- 
-    add_word(andressa),
-    add_word(henrique),
-    add_word(andre),
-    add_word(leo),
-    add_word(almeida).
+	add_word(andressa),
+	add_word(henrique),
+	add_word(andre),
+	add_word(leo),
+	add_word(almeida).
 

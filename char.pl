@@ -51,3 +51,8 @@ code(x,74).
 code(y,75).
 code(z,76).
 code(' ',77).
+
+
+
+% 'B'renda ' ' foi ' ' ao ' ' supermercado
+% 'C'sfoeb'A'gpj'A'bp'A'tvqfsnfsdbep
