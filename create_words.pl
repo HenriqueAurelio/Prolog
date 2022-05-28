@@ -5,24 +5,28 @@
 
 :- use_module(library(persistency)).
 
-:- persistent word(string:atom).
+:- persistent word(string:list).
 
 :- db_attach('word.journal', []).
 
 :- initialization(main).
 
-add_word(String) :-
+add_word(List) :-
 (
-	word(String), !
+	word(List), !
 	;
-	assert_word(String)
+	assert_word(List)
 ).
 
+string2code(Input,Output):-
+(
+ string_codes(Input,Output)
+).
 
 main :- 
-	add_word(andressa),
-	add_word(henrique),
-	add_word(andre),
-	add_word(leo),
-	add_word(almeida).
+	add_word("adam"),
+	add_word("mykon"),
+	add_word("robin"),
+	add_word("lily"),
+	add_word("michael").
 

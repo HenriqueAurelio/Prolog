@@ -5,6 +5,6 @@ assert(word(andre)).
 assert(word(leo)).
 assert(word(almeida)).
 assert(word(leonardo)).
-assert(word(leonardo)).
 assert(word(babaca)).
 assert(word(andrezinho)).
+assert(word(leonardoeumbundao)).
