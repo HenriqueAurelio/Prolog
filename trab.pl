@@ -8,7 +8,7 @@ code2_string(ListaCod, StringInput):-
 
 checkingLimitOfCipher(Num, X, Y):-
 	(
-		X > Num,
+		X > Num->
 			Y is X mod Num;
 		Y is X
 	).
@@ -19,64 +19,53 @@ validateCode(LCod, Key, LCodV):-
 
 cesar(Char, StringInput, Out):-
 (	
-       var(StringInput)->
+    var(StringInput)->
 		string2_code(Out, LCod),
 		code(Char,Key),
 		NewKey is -Key,
 		validateCode(LCod, NewKey, LCodV),
-		maplist(verifica(),LCodV,NewList),
+		maplist(checkingLimitOfCipher(),LCodV,NewList),
 		code2_string(NewList, StringInput);
 
 		string2_code(StringInput, LCod),
 		code(Char,Key),
-		validateCode(LCod, Key, LCodV),
+		validateCode(LCod,Key,LCodV),
 		code2_string(LCodV, Out)
 ).
 
-vigenere(CriptString,StringInput,Output):-
-	(
-		string2_code(StringInput, LCod),
-		code(CriptString,Key),
-		writeln(Key)
-	).
-
-verifica(X,Z):-
+checkingLimitOfCipher(X,Z):-
 	(		
 		X < 1 -> Z is 27 + X;
 		Z is X
 	). 
-	
-
+		
 word(henrique).
 word(pipa).
-
-code('a', 27).
-code('b', 1).
-code('c', 2).
-code('d', 3).
-code('e', 4).
-code('f', 5).
-code('g', 6).
-code('h', 7).
-code('i', 8).
-code('j', 9).
-code('k', 10).
-code('l', 11).
-code('m', 12).
-code('n', 13).
-code('o', 14).
-code('p', 15).
-code('q', 16).
-code('r', 17).
-code('s', 18).
-code('t', 19).
-code('u', 20).
-code('v', 21).
-code('w', 22).
-code('x', 23).
-code('y', 24).
-code('z', 25).
-code(' ', 26).
-
-
-
+code('A',0).
+code('a', 1).
+code('b', 2).
+code('c', 3).
+code('d', 4).
+code('e', 5).
+code('f', 6).
+code('g', 7).
+code('h', 8).
+code('i', 9).
+code('j', 10).
+code('k', 11).
+code('l', 12).
+code('m', 13).
+code('n', 14).
+code('o', 15).
+code('p', 16).
+code('q', 17).
+code('r', 18).
+code('s', 19).
+code('t', 20).
+code('u', 21).
+code('v', 22).
+code('w', 23).
+code('x', 24).
+code('y', 25).
+code('z', 26).
+code(' ', 27).
